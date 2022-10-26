@@ -1,0 +1,45 @@
+.secial-link {
+    margin-top: 40px;
+    li {
+        display: inline-block;
+        a {
+            font-size: 13px;
+            font-weight: 600;
+            width: 135px;
+            margin: 0 2px 5px 0;
+            height: 45px;
+            line-height: 45px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            background: #fff;
+
+            i {
+                height: 45px;
+                width: 45px;
+                line-height: 45px;
+                float: left;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.facebook-i {
+    background-color: $fb-icon-blue;
+}
+.twitter-i {
+    background-color: $twitter-icon-blue;
+}
+.google-i{
+    background-color: $google-clr;
+}
+.facebook-clr {
+    color: $fb-icon-blue;
+}
+.twitter-clr {
+    color: $twitter-icon-blue;
+}
+.google-clr {
+    color: $google-clr;
+}

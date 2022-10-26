@@ -1,0 +1,122 @@
+@import './abstracts/variables';
+@import './mixins/breakpoints';
+@import './mixins/functions';
+@import './abstracts/common';
+@import './abstracts/buttons';
+@import './abstracts/input';
+@import './abstracts/icons';
+@import './abstracts/data_table';
+@import './abstracts/select2';
+// @import './abstracts/multi-select-2';
+@import './includes/header';
+@import './includes/footer';
+@import './includes/login';
+@import './includes/register';
+
+.active-sidebar-menu {
+    left: 0px !important;
+}
+
+.sidebar-menu {
+    transition: all 0.5s ease-in-out;
+    background-color: $side-bar;
+    width: 240px;
+    position: fixed;
+    top: 60px;
+    bottom: 0px;
+    padding: 20px 0px;
+    left: -100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 999;
+    @extend %scroll-bar;
+    @include media-min-lg {
+        top: 62px;
+        left: 0;
+    }
+    .user-box {
+        .user-img {
+            img {
+                border-radius : 50%;
+                border : 2px solid white;
+                padding : 2px;
+            }
+        }
+        .user-details {
+            .user-position {
+                color: $side-bar-clr;
+            }
+        }
+    }
+    .sidebar-nav {
+        .border-line {
+            margin: 15px;
+            border-bottom: 2px solid $side-bar-clr;
+        }
+        .active {
+            background-color: black;
+            border-left: 5px solid white;
+        }
+        li {
+            color: $side-bar-clr;
+            a {
+                color: $side-bar-clr;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    color: white;
+                } 
+                i{
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.main-contant-page {
+    margin-top: 80px;
+    padding: 0px 15px;
+    @include media-min-lg {
+        overflow: hidden;
+        margin-left: 240px;
+        padding: 0px 15px 60px 15px;
+    }
+
+    .dashboard-section{
+        .card-group {
+            .card-wrap {
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                width: 23%;
+                color: $side-bar;
+                border-radius: 5px;
+                border: 1px solid #dee2e6;
+                h2 {
+                    font-weight: 600;
+                }
+                i{
+                    width: 25px;
+                }
+                @include media-max-xl {
+                    margin-top: 15px;
+                    width: 49%;
+                }
+                @include media-max-md {
+                    width: 100%;
+                }
+                p{
+                    font-size: 14px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    } 
+
+    #booking-room {
+        .form-control,.form-select {
+            border-left : 4px solid #ff5b5b !important;
+            height: 40px;
+            min-height : 30px;
+        }
+    }
+}
